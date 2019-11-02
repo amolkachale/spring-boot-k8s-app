@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-k8s-loadbalancer-service # Name of service
+spec:
+  type: LoadBalancer
+  selector:
+    app: k8s-app
+  ports:
+    - protocol: TCP
+      port: 8081         # Pod port
+      nodePort: 30180    # Node machine port
+      targetPort: 8081   # Container port
+  externalIPs:
+    - 172.27.95.108

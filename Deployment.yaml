@@ -17,7 +17,7 @@ spec:
       containers:
       - name: spring-boot-k8s-app 
         imagePullPolicy: IfNotPresent
-        image: spring-boot-k8s-app:1.0.0
+        image: spring-boot-k8s-app:1.0.0   #image name
         ports:
         - containerPort: 8081
 
